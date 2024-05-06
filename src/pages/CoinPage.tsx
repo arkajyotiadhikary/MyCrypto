@@ -42,7 +42,7 @@ const CoinPage: React.FC = () => {
 
       if (!coin) {
             return (
-                  <div className="flex flex-col items-center justify-center">
+                  <div className="flex flex-col items-center justify-center h-screen">
                         <div className="w-full h-16 bg-gray-300 rounded"></div>
                         <div className="w-1/2 h-12 bg-gray-300 rounded mt-4"></div>
                         <div className="w-1/2 h-12 bg-gray-300 rounded mt-4"></div>
@@ -53,7 +53,7 @@ const CoinPage: React.FC = () => {
       }
 
       return (
-            <div className="container mx-auto flex flex-col md:flex-row items-center justify-center mt-8">
+            <div className="container mx-auto flex flex-col md:flex-row items-center justify-center mt-8 h-screen">
                   <div className="md:w-1/3 p-8 border-r border-gray-300 flex flex-col justify-center">
                         <img
                               src={coin?.image.large}

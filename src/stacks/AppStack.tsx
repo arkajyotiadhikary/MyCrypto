@@ -1,13 +1,19 @@
 import { Route, Routes } from "react-router-dom";
 import CoinPage from "../pages/CoinPage";
 import HomePage from "../pages/HomePage";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const AppStack = () => {
       return (
-            <Routes>
-                  <Route path="/" Component={HomePage} />
-                  <Route path="/coins/:id" Component={CoinPage} />
-            </Routes>
+            <>
+                  <Header />
+                  <Routes>
+                        <Route path="/" Component={HomePage} />
+                        <Route path="/coins/:id" Component={CoinPage} />
+                  </Routes>
+                  <Footer />
+            </>
       );
 };
 

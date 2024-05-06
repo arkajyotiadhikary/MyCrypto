@@ -1,14 +1,22 @@
 // import { useHistory } from "react-router-dom";
 import { CryptoState } from "../contexts/CryptoContext";
+import { useNavigate } from "react-router-dom";
+import AuthModal from "../pages/AuthModal";
+import React from "react";
 
 const Header = () => {
       const { currency, setCurrency } = CryptoState();
+      const navigator = useNavigate();
+      const [showModal, setShowModal] = React.useState(false);
 
       return (
             <header className="flex flex-col w-full bg-gray-800 shadow-md">
                   <div className="container mx-auto px-4 md:px-6">
                         <div className="toolbar flex items-center justify-between min-h-16 md:min-h-20 lg:min-h-24 text-white">
-                              <div className="flex items-center space-x-2">
+                              <div
+                                    className="flex items-center space-x-2 cursor-pointer"
+                                    onClick={() => navigator("/")}
+                              >
                                     <svg
                                           className="w-6 h-6 text-yellow-400"
                                           xmlns="http://www.w3.org/2000/svg"
@@ -42,9 +50,20 @@ const Header = () => {
                                                 </svg>
                                           </div>
                                     </div>
-                                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+
+                                    <button
+                                          onClick={() => setShowModal(true)}
+                                          data-modal-target="authentication-modal"
+                                          data-modal-toggle="authentication-modal"
+                                          className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                          type="button"
+                                    >
                                           Log In
                                     </button>
+                                    <AuthModal
+                                          isOpen={showModal}
+                                          toggleModal={() => setShowModal(!showModal)}
+                                    />
                               </div>
                         </div>
                   </div>

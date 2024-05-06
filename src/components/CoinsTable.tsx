@@ -60,8 +60,9 @@ const CoinsTable: React.FC = () => {
                         Cryptocurrency Prices by Market Cap
                   </h1>
                   <input
+                        className="shadow-lg appearance-none border-2 border-gray-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"
+                        style={{ backgroundColor: "#f7fafc" }}
                         type="text"
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"
                         placeholder="Search For a Crypto Currency.."
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}

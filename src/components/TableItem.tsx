@@ -24,13 +24,13 @@ const TableItem: React.FC<TableItemProps> = ({ row }) => {
             <tr
                   onClick={() => navigator(`/coins/${row.id}`)}
                   key={row.id}
-                  className="hover:bg-gray-100 py-14 cursor-pointer transition-colors duration-300 "
+                  className="bg-white hover:bg-gray-100 py-14 cursor-pointer transition-colors duration-300"
             >
                   <td className="px-8 py-4 flex items-center text-lg">
                         <img
                               src={row.image}
                               alt={row.name}
-                              className="h-16 w-16 p-2 mr-6 mt-1 shadow-lg"
+                              className="h-16 w-16 mr-6 mt-1 shadow-md rounded-full bg-transparent"
                         />
                         <div className="flex flex-col text-left">
                               <span className="font-semibold text-gray-800">{row.symbol}</span>
