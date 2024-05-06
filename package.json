@@ -10,9 +10,6 @@
             "preview": "vite preview"
       },
       "dependencies": {
-            "@types/axios": "^0.14.0",
-            "@types/react-alice-carousel": "^1.15.3",
-            "@types/react-router-dom": "^5.3.3",
             "axios": "^1.6.8",
             "chart.js": "^4.4.2",
             "chartjs-adapter-date-fns": "^3.0.0",
@@ -24,6 +21,9 @@
             "react-router-dom": "^6.23.0"
       },
       "devDependencies": {
+            "@types/axios": "^0.14.0",
+            "@types/react-alice-carousel": "^1.15.3",
+            "@types/react-router-dom": "^5.3.3",
             "@types/react": "^18.2.66",
             "@types/react-dom": "^18.2.22",
             "@typescript-eslint/eslint-plugin": "^7.2.0",
